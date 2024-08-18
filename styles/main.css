@@ -5,12 +5,14 @@
 
 /* Global styles */
 :root {
-  --bg-color: #f5f5f5;
-  --primary-txt-color: #333333;
-  --secondary-txt-color: #666666;
-  --header-color: #1a1a1a;
-  --border-color: #e0e0e0;
-  --section-alt-bg: #fafafa;
+  --bg-color: #f5f5f5; /* Light gray background for the main content */
+  --primary-txt-color: #444444; /* Slightly softened text color for better readability */
+  --secondary-txt-color: #888888; /* Lighter gray for subtitles */
+  --heading-color: #1a1a1a; /* Darker, near-black color for headings */
+  --border-color: #e0e0e0; /* Light gray for subtle borders */
+  --section-alt-bg: #fafafa; /* Very light gray for alternate section backgrounds */
+  --header-footer-bg-color: #2e2e2e; /* Dark gray for header and footer backgrounds */
+  --link-color: #1a73e8; /* Bright blue for links */
 }
 
 * {
@@ -28,6 +30,26 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Body Text Fonts */
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400; /* Regular weight for readability */
+  color: var(--primary-txt-color);
+}
+
 /* Heading Fonts */
 h1,
 h2,
@@ -39,10 +61,60 @@ h6 {
   font-weight: 600; /* Semi-bold for clean headings */
 }
 
-/* Body Text Fonts */
-body,
-p,
-li {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400; /* Regular weight for readability */
+/* Header Styles */
+
+header {
+  border-bottom: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--header-footer-bg-color);
+  color: var(--section-alt-bg);
+}
+
+.branding h1 {
+  width: 30%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background: white;
+  border: 1px solid blue;
+  width: 90%;
+  height: 90vh;
+}
+
+.mobile-menu-list {
+  border: 1px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-toggle {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu-toggle .bar {
+  border: 1px solid red;
+  width: 100%;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--header-footer-bg-color);
+  color: var(--section-alt-bg);
 }
