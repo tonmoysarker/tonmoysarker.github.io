@@ -1,5 +1,4 @@
 /* Imports goes here */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -33,13 +32,14 @@ body {
 a {
   text-decoration: none;
   color: var(--link-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -62,7 +62,6 @@ h6 {
 }
 
 /* Header Styles */
-
 header {
   border-bottom: 1px solid red;
   display: flex;
@@ -71,15 +70,16 @@ header {
   padding: 0.5rem;
   background-color: var(--header-footer-bg-color);
   color: var(--section-alt-bg);
+
+  .branding h1 {
+    width: 30%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+  }
 }
 
-.branding h1 {
-  width: 30%;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1rem;
-}
-
-.mobile-nav {
+/* Mobile Nav Styles */
+#mobile-nav {
   display: none;
   position: absolute;
   top: 3rem;
@@ -88,29 +88,35 @@ header {
   border: 1px solid blue;
   width: 90%;
   height: 90vh;
+
+  .menu-list {
+    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .menu-list__item {
+      a {
+        color: var(--primary-txt-color);
+      }
+    }
+  }
 }
 
-.mobile-menu-list {
-  border: 1px solid red;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.menu-toggle {
+#menu-toggle {
   width: 2rem;
   height: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-.menu-toggle .bar {
-  border: 1px solid red;
-  width: 100%;
+  cursor: pointer;
+  .bar {
+    border: 1px solid var(--section-alt-bg);
+    width: 100%;
+  }
 }
 
 /* Footer Styles */
