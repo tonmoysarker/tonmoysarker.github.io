@@ -3,69 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tonmoy Sarker</title>
+    <title>Your Name | Portfolio</title>
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header>
-      <div class="branding">
-        <h1>_tonmoy</h1>
-      </div>
-      <nav class="main-nav"></nav>
-      <nav id="mobile-nav">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="#about">About</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#projects">Projects</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#contact">Contact</a>
-          </li>
+    <nav class="nav">
+      <div class="container">
+        <h1>Your Name</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-      <div id="menu-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
       </div>
-    </header>
-    <main>
-      <section class="section hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">Hi, I'm Tonmoy Sarker</h1>
-          <p class="hero-subtitle">I'm a web developer</p>
-        </div>
-      </section>
-      <section id="about">
-        <h2 class="section-title">About</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-        distinctio beatae velit quis cumque iste minima fugiat omnis, eum illo
-        quasi? Facilis a laudantium veritatis distinctio, architecto libero
-        consectetur possimus. Laudantium corporis ea ipsa esse molestiae!
-        Perspiciatis nobis voluptate rem assumenda dolorum eaque rerum debitis
-        vero, nisi distinctio natus itaque neque et cum. Fugit saepe corrupti
-        dolorem, possimus autem nisi!
-      </section>
-      <h2 class="section-title">Selected Works</h2>
-      <section id="projects">
-        <h2 class="section-title">About</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut,
-        voluptate, libero autem reiciendis reprehenderit id animi optio
-        perspiciatis eaque earum, quia explicabo odio tempora amet ullam
-        corporis commodi dolorem?
-      </section>
-      <section id="contact">
-        <h2 class="section-title">Contact</h2>
+    </nav>
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde magni
-        commodi velit dolores molestias non cupiditate omnis quia beatae sit
-        ducimus perferendis, obcaecati sapiente accusantium quos voluptate
-        dolor. Quam, aliquid.
-      </section>
-    </main>
-    <footer>&copy; 2024 by Tonmoy Sarker. All rights reserved.</footer>
+    <section id="home" class="hero">
+      <div class="container">
+        <div>
+          <h1>Front-End Developer</h1>
+          <p>Building beautiful and functional web experiences</p>
+          <button onclick="scrollToProjects()" class="cta-btn">
+            View My Work
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid" id="projects-container">
+          <!-- Projects will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Vue.js</span>
+          <span class="skill">React (Learning)</span>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="container">
+        <h3>Let's Connect</h3>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+      </div>
+    </footer>
     <script src="scripts/main.js"></script>
   </body>
 </html>
