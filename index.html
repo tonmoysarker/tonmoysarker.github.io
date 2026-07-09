@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tonmoy Sarker</title>
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="branding">
-        <h1>_tonmoy</h1>
-      </div>
-      <nav class="main-nav"></nav>
-      <nav id="mobile-nav">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="#about">About</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#projects">Projects</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div id="menu-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </header>
-    <main>
-      <section class="section hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">Hi, I'm Tonmoy Sarker</h1>
-          <p class="hero-subtitle">I'm a web developer</p>
-        </div>
-      </section>
-      <section id="about">
-        <h2 class="section-title">About</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-        distinctio beatae velit quis cumque iste minima fugiat omnis, eum illo
-        quasi? Facilis a laudantium veritatis distinctio, architecto libero
-        consectetur possimus. Laudantium corporis ea ipsa esse molestiae!
-        Perspiciatis nobis voluptate rem assumenda dolorum eaque rerum debitis
-        vero, nisi distinctio natus itaque neque et cum. Fugit saepe corrupti
-        dolorem, possimus autem nisi!
-      </section>
-      <h2 class="section-title">Selected Works</h2>
-      <section id="projects">
-        <h2 class="section-title">About</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut,
-        voluptate, libero autem reiciendis reprehenderit id animi optio
-        perspiciatis eaque earum, quia explicabo odio tempora amet ullam
-        corporis commodi dolorem?
-      </section>
-      <section id="contact">
-        <h2 class="section-title">Contact</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Tonmoy Sarker — Front-End Developer portfolio terminal. Type help to explore projects, skills, experience, and contact." />
+  <meta name="theme-color" content="#ffb000" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Tonmoy Sarker" />
+  <title>tonmoy@portfolio:~$</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-size='90'%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/terminal.css" />
+</head>
+<body>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="crt-overlay" aria-hidden="true"></div>
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde magni
-        commodi velit dolores molestias non cupiditate omnis quia beatae sit
-        ducimus perferendis, obcaecati sapiente accusantium quos voluptate
-        dolor. Quam, aliquid.
-      </section>
-    </main>
-    <footer>&copy; 2024 by Tonmoy Sarker. All rights reserved.</footer>
-    <script src="scripts/main.js"></script>
-  </body>
+  <div class="terminal-window" role="application" aria-label="Terminal portfolio">
+    <div class="window-chrome">
+      <div class="traffic-lights">
+        <span class="light close" aria-label="Close"></span>
+        <span class="light minimize" aria-label="Minimize"></span>
+        <span class="light maximize" aria-label="Maximize"></span>
+      </div>
+      <div class="window-title">tonmoy@portfolio:~$</div>
+    </div>
+
+    <div class="terminal-body">
+      <div class="terminal-output" id="terminal-output" role="log" aria-live="polite"></div>
+
+      <div class="input-line" id="input-line" style="display: none;">
+        <span class="prompt" id="prompt">tonmoy@portfolio:~$</span>
+        <span class="cursor" id="cursor" aria-hidden="true">&#9608;</span>
+        <input type="text" class="command-input" id="command-input" autocomplete="off" spellcheck="false" aria-label="Command input" />
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span class="status-item" id="status-time"></span>
+      <span class="status-item">FPS: <span id="status-fps">60</span></span>
+      <span class="status-item">MEM: <span id="status-mem">12.4M</span></span>
+      <span class="status-item right">INSERT</span>
+    </div>
+  </div>
+
+  <footer class="terminal-footer" role="contentinfo">
+    <p>Built with vanilla JS · <a href="https://github.com/tonmoysarker" target="_blank" rel="noopener">github.com/tonmoysarker</a> · <kbd>&#8593;</kbd><kbd>&#8593;</kbd><kbd>&#8595;</kbd><kbd>&#8595;</kbd><kbd>&#8592;</kbd><kbd>&#8594;</kbd><kbd>&#8592;</kbd><kbd>&#8594;</kbd><kbd>B</kbd><kbd>A</kbd> for easter egg</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
 </html>
